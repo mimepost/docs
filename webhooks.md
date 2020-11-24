@@ -10,11 +10,11 @@ A Webhook is a way to deliver events like open, click, bounce, etc. over the HTT
 
 4. click
 
-5. Unsubscribe
+5. unsubscribe
 
-6. Bounce_soft
+6. bounce_soft
 
-7. Bounce_hard
+7. bounce_hard
 
 8. block_soft
 
