@@ -236,7 +236,7 @@ Whenver an event occurred for which you had configured your webhook, then the Mi
 
 ## In case of failure
 
-In case of failure, that is when our system receives  other than 200 HTTP response code , we do not retry the event. Instead, we store all the fail events in our internal error queue. On receiving support request, we can resend those failed event back.
+In case of failure, that is when our system receives other than 200 HTTP response code, we do not retry. Instead, we store all the failed events in our internal error queue. On receiving support request, we can resend those failed events back.
 
 Currently, the counts are not visible on the front end. However, this is the first item in our development road-map, which is planned to be released soon. This release will enable user to see the failed count on the front end with an option to flush the queue (resend those events back to the URL). This release will also include the ability for the system to first retry any failed events (on preset intervals) before push them to the error queue.
 
