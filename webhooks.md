@@ -22,9 +22,9 @@ A Webhook is a way to deliver events like open, click, bounce, etc. over the HTT
 
 10. spam
 
-## Receiving format
+## Receiving format (Payload Data)
 
-Whenver an event occurred for which you had configured your webhook, then the MimePost app will send you a post http call on your given URL. The call will have string body in JSON format. The data structure (JSON) will depend on the type of event.
+Whenever an event occurred for which you had configured your webhook, then the MimePost app will send you a post HTTP call on your given URL. The call will have string body in JSON format. The data structure (JSON) will depend on the type of event.
 
 ### Data structure / Schema of Events (with sample example data):
 
@@ -239,6 +239,14 @@ Whenver an event occurred for which you had configured your webhook, then the Mi
 In case of failure, that is when our system receives other than 200 HTTP response code, we do not retry. Instead, we store all the failed events in our internal error queue. On receiving support request, we can resend those failed events back.
 
 Currently, the counts are not visible on the front end. However, this is the first item in our development road-map, which is planned to be released soon. This release will enable user to see the failed count on the front end with an option to flush the queue (resend those events back to the URL). This release will also include the ability for the system to first retry any failed events (on preset intervals) before push them to the error queue.
+
+
+
+## Securing Webhooks
+
+MimePost took the simplest approach to ensure the authenticity of the events coming from MimePost and not from any other.
+
+MimePost generate a unique secret key whenever you create a Webhook using front-end or MimePost API. That secret key is visible from front end as well as it get returned in API. Everytime MimePost sends event on your webhook URL, you will also get this secret key in event data. You can then match this secret key in your webhook receiving program. 
 
 
 
