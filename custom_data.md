@@ -62,6 +62,8 @@ The custom data will be available in your email message source code, like any ot
 
 ### Limits
 
+Currently we have not implement any limits, but we will add them soon. Below are the recommendations that you should follow:
+
 1. You should not use multiple X-Vars headers in SMTP 
 
 2. Do not use more than 10 key value fields
