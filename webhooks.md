@@ -246,7 +246,17 @@ Currently, the counts are not visible on the front end. However, this is the fir
 
 MimePost took the simplest approach to ensure the authenticity of the events coming from MimePost and not from any other.
 
-MimePost generate a unique secret key whenever you create a Webhook using front-end or MimePost API. That secret key is visible from front end as well as it get returned in API. Everytime MimePost sends event on your webhook URL, you will also get this secret key in event data. You can then match this secret key in your webhook receiving program. 
+MimePost generate a unique secret key whenever you create a Webhook. This secret key is visible from front end as well as it get returned in API. Everytime MimePost sends event on your webhook URL, you will also get this secret key as an HTTP header of the event data. You can then match this secret key in your webhook receiving program. 
 
+The secret key example (in Webhook HTTP calls)
+
+```
+x-secret-token: oTzN3c5sXNamsA5ODW9E2
+
+```
+
+A real world example
+
+![Webhook Headers](images/webhook-headers-real-example.png)
 
 
