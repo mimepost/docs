@@ -1,0 +1,13 @@
+site_name: MimePost Docs
+nav:
+- Home: 'index.md'
+- Getting Started: 'getting_started.md'
+- User Guide:
+    - 'Getting Started': 'getting_started.md'
+    - 'Sandbox': 'sandbox.md'
+    - 'SMTP': 'smtp.md'
+    - 'API': 'api.md'
+    - 'Webhooks': 'webhooks.md'
+    - 'Integration': 'integration.md'
+    - 'Custom Data': 'custom_data.md'
+theme: readthedocs
