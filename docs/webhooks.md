@@ -247,8 +247,7 @@ In case of failure, that is when our system receives other than __200__ HTTP res
 
 If none of these attempts work, we store all the failed events in our internal error queue. On receiving support request, we can resend those failed events back.
 
-Currently, the counts are not visible on the front end. However, this is the first item in our development road-map, which is planned to be released soon. This release will enable user to see the failed count on the front end with an option to flush the queue (resend those events back to the URL). This release will also include the ability for the system to first retry any failed events (on preset intervals) before push them to the error queue.
-
+User can see the failed count on the panel ([https://mimepost.com/app/integration/webhooks](https://mimepost.com/app/integration/webhooks)) and resend those events back to the URL by clicking on the __Re-Push__ option. 
 
 
 ## Securing Webhooks
