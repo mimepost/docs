@@ -8,6 +8,8 @@ nav:
     - 'SMTP': 'smtp.md'
     - 'API': 'api.md'
     - 'Webhooks': 'webhooks.md'
-    - 'Integration': 'integration.md'
+    - Integration : 
+        - 'SDK' : 'integration.md'
+        - 'Zapier' : 'zapier.md'
     - 'Custom Data': 'custom_data.md'
 theme: readthedocs
